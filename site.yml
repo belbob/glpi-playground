@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: vagrant
+  become: true
+  gather_facts: True
+
+  roles:
+  - glpi

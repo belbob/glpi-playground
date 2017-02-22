@@ -1,0 +1,6 @@
+---
+selinux_state: enforcing
+#selinux_state: permissive
+mysql_root_password: password
+required_repos: remi,remi-php71  ## remi,remi-safe,remi-php54,55,56,70,71
+fqdn: glpi.belbob.thuis

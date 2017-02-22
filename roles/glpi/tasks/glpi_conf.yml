@@ -1,0 +1,9 @@
+---
+- name: Copy the glpi.conf
+  template:
+    src: glpi.conf.j2
+    dest: /etc/httpd/conf.d/glpi.conf
+    owner: root
+    mode: 0600
+  notify:
+    - start fusioninventory-agent

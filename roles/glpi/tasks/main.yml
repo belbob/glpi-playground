@@ -1,0 +1,8 @@
+---
+- include: install.yml  # install pkgs
+- include: services.yml  # running services
+- include: security.yml # config firewall
+- include: mysql_secure_installation.yml # secure mysql
+- include: config_phpMyAdmin.yml
+- include: glpi_conf.yml
+- include: fusioninventory_agent.yml

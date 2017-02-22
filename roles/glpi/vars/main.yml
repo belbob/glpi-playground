@@ -1,0 +1,38 @@
+---
+repos:
+ - epel-release
+ - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+packages:
+ - ntp
+ - httpd
+ #- mod_ssl
+ - php
+ - mariadb-server
+ - php-mysqlnd
+ - MySQL-python
+ - phpmyadmin
+ - glpi
+ - glpi-pdf
+ - glpi-reports
+ - glpi-appliances
+ - glpi-behaviors
+ - glpi-data-injection
+ - glpi-fusioninventory
+ - fusioninventory-agent
+ - fusioninventory-agent-task-inventory
+services:
+ - sshd
+ - ntpd
+ - firewalld
+ - httpd
+ - mariadb
+firewalld_services_enabled:
+ - ssh
+ - http
+ #- https
+firewalld_ports_enabled:
+ - 62354/tcp
+set_sebooleans:
+ - httpd_can_network_connect
+ - httpd_can_network_connect_db
+ - httpd_can_sendmail

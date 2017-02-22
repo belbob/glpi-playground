@@ -1,0 +1,10 @@
+---
+- name: Copy fusioninventory-agent.cnf
+  template:
+    dest: /etc/fusioninventory/agent.cfg
+    src: fusion_inventory_agent.cfg.j2
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - restart httpd

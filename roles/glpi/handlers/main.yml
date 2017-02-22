@@ -1,0 +1,20 @@
+---
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted
+
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+
+- name: restart mariadb
+  service:
+    name: mariadb
+    state: restarted
+
+- name: start fusioninventory-agent
+  service:
+    name: fusioninventory-agent
+    state: started
