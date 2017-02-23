@@ -6,4 +6,9 @@
     owner: root
     mode: 0600
   notify:
-    - start fusioninventory-agent
+    - restart httpd
+
+- name: Cron GLPI
+  cron:
+    name: "Cron GLPI"
+    job: "/usr/bin/php /usr/share/glpi/front/cron.php &>/dev/null"
