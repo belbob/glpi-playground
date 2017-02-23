@@ -1,4 +1,4 @@
-# inventory-playground
+# glpi-playground
 This is an Ansible project with a development environment powered by Vagrant, to play with GLPI, fusioninventory, datainjection, and more.
 
 This project sets up:
@@ -29,7 +29,7 @@ $ git clone https://github.com/belbob/glpi-playground.git my-glpi-playground
 ```
 After cloning, it's best to remove the `.git` directory and initialise a new repository. The history of the code is most probably irrelevant for your glpi-playground project...
 
-### Installation inventory-playground
+### Installation glpi-playground
 
 Open a terminal, go to the "my-glpi-playground" directory to store this project and issue the following commands:
 
