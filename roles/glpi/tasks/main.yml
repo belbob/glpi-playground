@@ -4,5 +4,6 @@
 - include: security.yml # config firewall
 - include: mysql_secure_installation.yml # secure mysql
 - include: config_phpMyAdmin.yml
+- include: add_opcache.yml
 - include: glpi_conf.yml
 - include: fusioninventory_agent.yml
