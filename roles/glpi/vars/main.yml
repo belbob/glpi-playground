@@ -5,6 +5,7 @@ repos:
 packages:
  - wget
  - ntp
+ - firewalld
  - cockpit
  - httpd
  #- mod_ssl

@@ -1,0 +1,6 @@
+# {{ ansible_managed }}
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+{% set short_name = fqdn.split('.') %}
+{{ ansible_eth0.ipv4.address }} {{ fqdn }} {{ short_name[0] }}
