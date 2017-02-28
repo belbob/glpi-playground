@@ -3,4 +3,4 @@
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 
 {% set short_name = fqdn.split('.') %}
-{{ ansible_eth0.ipv4.address }} {{ fqdn }} {{ short_name[0] }}
+{{ ansible_default_ipv4.address }} {{ fqdn }} {{ short_name[0] }}

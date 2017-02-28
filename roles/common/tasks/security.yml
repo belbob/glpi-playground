@@ -1,11 +1,8 @@
 ---
-- name: set SELinux booleans
-  seboolean:
-    name: "{{ item }}"
-    state: yes
-    persistent: yes
-  with_items: "{{ set_sebooleans }}"
-  when: set_sebooleans is defined
+- name: Enforcing SELinux
+  selinux:
+    policy: targeted
+    state: "{{ selinux_state }}"
   tags:
     - security
 

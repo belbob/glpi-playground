@@ -8,8 +8,3 @@
   service:
     name: httpd
     state: restarted
-
-- name: start fusioninventory-agent
-  service:
-    name: fusioninventory-agent
-    state: started

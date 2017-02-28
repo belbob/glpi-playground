@@ -3,18 +3,6 @@ repos:
  - epel-release
  - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 packages:
- - wget
- - ntp
- - firewalld
- - cockpit
- - httpd
- #- mod_ssl
- - mariadb-server
- - php
- - php-mysqlnd
- - php71-php-opcache
- - MySQL-python
- - phpmyadmin
  - glpi
  - glpi-pdf
  - glpi-reports
@@ -25,19 +13,14 @@ packages:
  - fusioninventory-agent
  - fusioninventory-agent-task-inventory
 services:
- - sshd
- - ntpd
  - firewalld
- - cockpit
  - httpd
  - mariadb
 firewalld_services_enabled:
- - ssh
  - http
  #- https
 firewalld_ports_enabled:
  - 62354/tcp
- - 9090/tcp
 set_sebooleans:
  - httpd_can_network_connect
  - httpd_can_network_connect_db
