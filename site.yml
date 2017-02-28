@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: vagrant #set root for use without vagrant
+  user: root
   become: true
   gather_facts: True
 
