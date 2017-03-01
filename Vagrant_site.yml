@@ -6,6 +6,6 @@
 
   roles:
   - common
-#  - webserver
-#  - mysql
-#  - glpi
+  - webserver
+  - mysql
+  - glpi

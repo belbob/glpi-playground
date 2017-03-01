@@ -28,6 +28,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision :hostmanager
 
   config.vm.provision "ansible" do |ansible|
+    ansible.extra_vars = {
+            inventory_hostname: FQDN,
+            inventory_hostname_short: ALIAS
+         }
     ansible.playbook = "Vagrant_site.yml"
   end
 

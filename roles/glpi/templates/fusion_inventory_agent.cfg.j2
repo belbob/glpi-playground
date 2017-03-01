@@ -12,7 +12,7 @@
 #server = http://server.domain.com/ocsinventory
 # send tasks results to a FusionInventory for GLPI server
 #server = http://server.domain.com/glpi/plugins/fusioninventory/
-server = http://{{ ansible_fqdn }}/glpi/plugins/fusioninventory/
+server = http://{{ inventory_hostname }}/glpi/plugins/fusioninventory/
 # write tasks results in a directory
 #local = /tmp
 

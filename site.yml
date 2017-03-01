@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: root
+  user: root #orsome  sudo adminuser
   become: true
   gather_facts: True
 
