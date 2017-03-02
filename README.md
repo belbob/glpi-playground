@@ -29,14 +29,32 @@ $ git clone https://github.com/belbob/glpi-playground.git my-glpi-playground
 ```
 After cloning, it's best to remove the `.git` directory and initialise a new repository. The history of the code is most probably irrelevant for your glpi-playground project...
 
-### Installation glpi-playground
+### Installation glpi-playground with Vagrant
 
 Open a terminal, go to the "my-glpi-playground" directory to store this project and issue the following commands:
+
+Open hosts file and edit the hostname, only the first hostname will be used by Vagrant.
 
 create the glpi-vm
 
 ```ShellSession
 $ vagrant up
+```
+
+### Installation glpi-playground as ansible-playbook
+
+Create a machine with a CentOS/7 - minimal install. Use this IP-address for the hosts file.
+
+Open hosts file and edit the hostname and IP-address.
+
+Add id_rsa.pub key for passwordless login.
+
+```ShellSession
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
+```
+
+```ShellSession
+ansible-playbook -i hosts site.yml
 ```
 
 ## some issues
