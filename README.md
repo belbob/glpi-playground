@@ -75,7 +75,7 @@ clone glpi-playground
 goto glpi-playgroung
 
 ```ShellSession
-# cd glpi-playground.git
+# cd glpi-playground
 ```
 Edit hosts file and change the hostname and IP-address before run:
 
