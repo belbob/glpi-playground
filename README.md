@@ -33,7 +33,7 @@ After cloning, it's best to remove the `.git` directory and initialise a new rep
 
 Open a terminal, go to the "my-glpi-playground" directory to store this project and issue the following commands:
 
-Open hosts file and edit the hostname, only the first hostname will be used by Vagrant.
+Edit hosts file and gif a suiteable hostname, only the first hostname will be used by Vagrant.
 
 create the glpi-vm
 
@@ -41,20 +41,46 @@ create the glpi-vm
 $ vagrant up
 ```
 
-### Installation glpi-playground as ansible-playbook
+### Installation glpi-playground with ansible-playbook remote
 
 Create a machine with a CentOS/7 - minimal install. Use this IP-address for the hosts file.
 
-Open hosts file and edit the hostname and IP-address.
+Edit hosts file and gif a suiteable hostname and IP-address.
 
 Add id_rsa.pub key for passwordless login.
 
 ```ShellSession
-ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
 ```
 
 ```ShellSession
-ansible-playbook -i hosts site.yml
+$ ansible-playbook -i hosts site.yml
+```
+
+### Installation glpi-playground on a local machine
+
+Create a updated machine with a CentOS/7 - minimal install. Use use a fix IP-address.
+
+make sure you have installed dependencies:
+
+```ShellSession
+# yum -y install epel-release
+# yum -y install git ansible
+```
+clone glpi-playground
+
+```ShellSession
+$ git clone https://github.com/belbob/glpi-playground.git
+```
+goto glpi-playgroung
+
+```ShellSession
+$ cd glpi-playground.git
+```
+Edit hosts file and change the hostname and IP-address before run:
+
+```ShellSession
+ansible-playbook -i hosts -c local site.yml
 ```
 
 ## some issues
