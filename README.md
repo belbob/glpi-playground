@@ -70,17 +70,17 @@ make sure you have installed dependencies:
 clone glpi-playground
 
 ```ShellSession
-$ git clone https://github.com/belbob/glpi-playground.git
+# git clone https://github.com/belbob/glpi-playground.git
 ```
 goto glpi-playgroung
 
 ```ShellSession
-$ cd glpi-playground.git
+# cd glpi-playground.git
 ```
 Edit hosts file and change the hostname and IP-address before run:
 
 ```ShellSession
-ansible-playbook -i hosts -c local site.yml
+# ansible-playbook -i hosts -c local site.yml
 ```
 
 ## some issues
