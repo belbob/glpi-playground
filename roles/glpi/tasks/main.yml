@@ -4,3 +4,4 @@
 - include: security.yml # config firewall
 - include: glpi_conf.yml
 - include: fusioninventory_agent.yml
+- include: add_extra_plugins.yml

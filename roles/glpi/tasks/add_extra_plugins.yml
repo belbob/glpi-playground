@@ -1,0 +1,7 @@
+---
+- name: Add several plugins
+  unarchive:
+    src: "{{ item }}"
+    dest: /usr/share/glpi/plugins/
+  with_fileglob:
+    - roles/glpi/files/plugins/*

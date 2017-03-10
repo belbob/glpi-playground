@@ -1,7 +1,7 @@
 ---
 - name: Sets the root password
   mysql_user:
-    user: root
+    user: "{{ mysql_root_user }}"
     password: "{{ mysql_root_password }}"
     host: localhost
 
@@ -9,8 +9,8 @@
   template:
     dest: /root/.my.cnf
     src: my.cnf.j2
-    owner: root
-    group: root
+    owner: "{{ mysql_root_user }}"
+    group: "{{ mysql_root_user }}"
     mode: '0600'
 
 - name: delete anonymous accounts
