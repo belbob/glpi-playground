@@ -1,0 +1,35 @@
+---
+#
+# howto use:
+# edit hosts file
+# ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
+# ansible-playbook -i hosts playbook_install_fia.yml --extra-vars "target=see_hosts_file"
+#
+- hosts: '{{ target }}'
+  user: root
+  become: true
+  gather_facts: True
+
+  tasks:
+  - name: install fusioninventory-agent
+    dnf:
+      pkg: fusioninventory-agent
+      state: latest
+    when:
+      - ansible_distribution == "Fedora"
+
+  - name: install fusioninventory-agent
+    yum:
+      pkg: fusioninventory-agent
+      state: latest
+    when:
+      - ansible_distribution == "CentOS"
+
+  - name: config fusioninventory/agent.cfg
+    replace:
+      dest: /etc/fusioninventory/agent.cfg
+      regexp: '^#server = http://server.domain.com/glpi/plugins/fusioninventory/'
+      replace: 'server = http://glpi.donboscowilrijk.be/glpi/plugins/fusioninventory/'
+
+  - name: start fusioninventory-agent
+    command: fusioninventory-agent

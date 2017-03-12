@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
             inventory_hostname: FQDN,
             inventory_hostname_short: ALIAS
          }
-    ansible.playbook = "Vagrant_site.yml"
+    ansible.playbook = "playbook_vagrant.yml"
   end
 
 end

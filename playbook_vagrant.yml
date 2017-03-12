@@ -1,6 +1,9 @@
 ---
+#
+# see Vagrantfile
+#
 - hosts: all
-  user: vagrant #set root for use without vagrant
+  user: vagrant
   become: true
   gather_facts: True
 
@@ -8,7 +11,7 @@
   - all_vars.yml
 
   roles:
-#  - common
-#  - webserver
-#  - mysql
+  - common
+  - webserver
+  - mysql
   - glpi
