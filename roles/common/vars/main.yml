@@ -4,6 +4,8 @@ packages:
  - ntp
  - firewalld
  - cockpit
+ - cockpit-networkmanager
+ - cockpit-storaged
 services:
  - sshd
  - ntpd

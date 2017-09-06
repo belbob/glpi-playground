@@ -13,15 +13,21 @@
   tasks:
   - name: install fusioninventory-agent
     dnf:
-      pkg: fusioninventory-agent
+      pkg: "{{ item }}"
       state: latest
+    with_items:
+      - fusioninventory-agent
+      - fusioninventory-agent-task-inventory
     when:
       - ansible_distribution == "Fedora"
 
   - name: install fusioninventory-agent
     yum:
-      pkg: fusioninventory-agent
+      pkg: "{{ item }}"
       state: latest
+    with_items:
+      - fusioninventory-agent
+      - fusioninventory-agent-task-inventory 
     when:
       - ansible_distribution == "CentOS"
 
@@ -31,5 +37,9 @@
       regexp: '^#server = http://server.domain.com/glpi/plugins/fusioninventory/'
       replace: 'server = http://glpi.donboscowilrijk.be/glpi/plugins/fusioninventory/'
 
+#  - name: start fusioninventory-agent
+#    command: fusioninventory-agent
   - name: start fusioninventory-agent
-    command: fusioninventory-agent
+    service:
+      name: fusioninventory-agent
+      state: started

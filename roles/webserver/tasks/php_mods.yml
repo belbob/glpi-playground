@@ -1,0 +1,48 @@
+---
+- name: Create symlink to opcache.so
+  file:
+    src: /opt/remi/php72/root/lib64/php/modules/opcache.so
+    dest: /usr/lib64/php/modules/opcache.so
+    state: link
+  notify:
+    - restart httpd
+
+- name: Create symlink to apc.so
+  file:
+    src: /opt/remi/php72/root/lib64/php/modules/apc.so
+    dest: /usr/lib64/php/modules/apc.so
+    state: link
+  notify:
+    - restart httpd
+
+- name: Create symlink to apcu.so
+  file:
+    src: /opt/remi/php72/root/lib64/php/modules/apcu.so
+    dest: /usr/lib64/php/modules/apcu.so
+    state: link
+  notify:
+    - restart httpd
+
+- name: Create symlink to 10-opcache.ini
+  file:
+    src: /etc/opt/remi/php72/php.d/10-opcache.ini
+    dest: /etc/php.d/10-opcache.ini
+    state: link
+  notify:
+    - restart httpd
+
+- name: Create symlink to 50-apc.ini
+  file:
+    src: /etc/opt/remi/php72/php.d/50-apc.ini
+    dest: /etc/php.d/50-apc.ini
+    state: link
+  notify:
+    - restart httpd
+
+- name: Create symlink to 40-apcu.ini
+  file:
+    src: /etc/opt/remi/php72/php.d/40-apcu.ini
+    dest: /etc/php.d/40-apcu.ini
+    state: link
+  notify:
+    - restart httpd

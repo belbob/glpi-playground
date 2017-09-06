@@ -1,2 +1,9 @@
 [glpi]
 glpi.belbob.thuis ansible_host=192.168.122.99
+
+[screen]
+screen01.donboscowilrijk.be ansible_host=192.168.224.11
+screen02.donboscowilrijk.be ansible_host=192.168.224.12
+
+[beamer]
+screen01.donboscowilrijk.be ansible_host=192.168.224.19

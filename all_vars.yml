@@ -4,7 +4,7 @@ selinux_state: enforcing
 time_zone: Europe/Brussels
 
 # required repos
-required_repos: remi,remi-php71  ## remi,remi-safe,remi-php54,55,56,70,71
+required_repos: remi,remi-php72  ## remi,remi-safe,remi-php54,55,56,70,71,72
 
 # mysql
 mysql_root_user: root

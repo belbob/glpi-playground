@@ -3,4 +3,4 @@
 - include: services.yml  # running services
 - include: security.yml # config firewall
 - include: set_timezone.yml
-- include: add_opcache.yml
+- include: php_mods.yml #php-plugins opcache,apc,apcu,apcu-bc

@@ -6,7 +6,8 @@ packages:
  - httpd
  #- mod_ssl
  - php
- - php71-php-opcache
+ - php72-php-opcache
+ - php72-php-pecl-apcu-bc
 services:
  - httpd
 firewalld_services_enabled:
