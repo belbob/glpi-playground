@@ -5,7 +5,7 @@ This project sets up:
 
 * 1 virtual machine with centos/7
 * MariaDB and phpMyAdmin
-* php 7.1
+* php 7.2
 * GLPI and some plugins
 
 This project is intended as a demo/playground for a inventory-introductory , teaching git, vagrant and ansible, in the most simple way, and still useable in my classroom. Surely , this playbook can still be improved, but this way it is manageable in my classroom with my students.
