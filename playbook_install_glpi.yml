@@ -4,7 +4,7 @@
 # edit hosts file
 # edit if needed all_vars.yml
 # ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.xxx.xxx
-# ansible-playbook -i hosts playbook_install_elk.yml --extra-vars "target=see_hosts_file"
+# ansible-playbook -i hosts playbook_install_glpi.yml --extra-vars "target=see_hosts_file"
 #
 - hosts: '{{ target }}'
   user: root             # or some adminuser
