@@ -1,0 +1,9 @@
+---
+packages:
+ - pygpgme
+ - yum-utils
+ - grafana
+services:
+ - grafana-server
+firewalld_ports_enabled:
+ - 3000/tcp

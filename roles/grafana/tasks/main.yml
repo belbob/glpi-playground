@@ -1,6 +1,7 @@
 ---
+- include_tasks: repo.yml
 - include_tasks: install.yml  # install pkgs
 - include_tasks: services.yml  # running services
 - include_tasks: security.yml # config firewall
-- include_tasks: set_timezone.yml
-- include_tasks: php_mods.yml #php-plugins opcache,apc,apcu,apcu-bc
+- include_tasks: add_plugins.yml # add some grafana plugins
+- include_tasks: conf_httpd.yml

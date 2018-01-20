@@ -1,7 +1,7 @@
 ---
-- include: install.yml  # install pkgs
-- include: services.yml  # running services
-- include: security.yml # config firewall
-- include: glpi_conf.yml
-- include: fusioninventory_agent.yml
+- include_tasks: install.yml  # install pkgs
+- include_tasks: services.yml  # running services
+- include_tasks: security.yml # config firewall
+- include_tasks: glpi_conf.yml
+- include_tasks: fusioninventory_agent.yml
 - include: add_extra_plugins.yml

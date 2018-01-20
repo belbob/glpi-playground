@@ -1,0 +1,15 @@
+---
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted
+
+- name: restart grafana-server
+  service:
+    name: grafana-server
+    state: restarted
+
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
